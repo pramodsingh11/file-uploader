@@ -1,0 +1,97 @@
+.cover {
+  background: #e8e9ec;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.wrap {
+  background: #e8e9ec;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.tab {
+  text-align: center;
+  width: 660px;
+  height: 772px;
+  background: #f3f4f5;
+  box-shadow: -10px -10px 25px 12px #ffffff, 10px 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+}
+
+.tabLanding {
+  text-align: center;
+  width: 360px;
+  height: 572px;
+  background: #f3f4f5;
+  box-shadow: -10px -10px 25px 12px #ffffff, 10px 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+}
+
+.googleAuth {
+  display: flex;
+  cursor: pointer;
+  height: 48px;
+  background: #ffffff;
+  border-radius: 45px;
+  border: none;
+  margin: 11%;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+}
+.googleimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8%;
+  margin-right: 7%;
+}
+.googletext {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  border: none;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: #3282cd;
+  color: #f3f4f5;
+  border-radius: 12px;
+ 
+}
+.submit {
+  width: 150px;
+  border: none;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: #32cd32;
+  color: #f3f4f5;
+  font-size: 16px;
+  border-radius: 12px;
+  height: 30px;
+}
+.content{
+  width: 80%;
+  border: none;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: #32cd32;
+  color: #f3f4f5;
+  font-size: 16px;
+  border-radius: 12px;
+  height: 30px;
+}
+.googletext{
+    border-radius: 10px;
+}
