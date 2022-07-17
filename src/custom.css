@@ -81,7 +81,7 @@ input[type="file"] {
   height: 30px;
 }
 .content{
-  width: 80%;
+  width: 200px;
   border: none;
   display: inline-block;
   padding: 6px 12px;

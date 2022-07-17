@@ -61,7 +61,7 @@ const LoginPage = (props) => {
             {/* </div> */}
           </div>
 
-          <p style={{ cursor: "pointer", fontWeight: 500 }}>
+          <p style={{ cursor: "pointer", fontWeight: 500 }} onClick={()=>history("upload-file")}>
             Not a Gmail User ?
           </p>
         </div>
