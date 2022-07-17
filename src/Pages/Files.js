@@ -4,7 +4,7 @@ import { S3Client } from "@aws-sdk/client-s3";
 import AWS from "aws-sdk";
 
 const Files = (props) => {
-  console.log(process.env.GOOGLE_CLIENT_KEY, props);
+  
   const [file, setFile] = useState();
   const [filename, setFileName] = useState();
   const [buttonnmae, Setbuttonname] = useState("Submit");
