@@ -11,6 +11,7 @@ const Files = (props) => {
   const [content, setContent] = useState([]);
   const [toggle, setToggle] = useState(false);
   const [err, setErr] = useState("");
+  const[downloadstart,setDownloadStart]=useState()
   const userName = localStorage.getItem("userName");
   const config = {
     accessKeyId: "AKIAQMSLV63XPT4SBO3L",
@@ -75,7 +76,9 @@ const Files = (props) => {
 
   AWS.config.update(config);
 
-  const handleDownload = (value) => {
+  const handleDownload = (value,index) => {
+
+    setDownloadStart(index)
     console.log("handle download", value);
     const s3 = new AWS.S3();
 
@@ -100,6 +103,7 @@ const Files = (props) => {
         link.click();
 
         link.parentNode.removeChild(link);
+        setDownloadStart("Download File")
       }
     });
   };
@@ -107,9 +111,9 @@ const Files = (props) => {
   return (
     <div className="wrap">
       <div className="tab">
-        {userName ? <h1>Hi {userName}</h1> : null}
+        {userName ? <h2>Hi {userName}</h2> : null}
 
-        <h1>Welcome to File upload page </h1>
+        <h2>Welcome to File upload page </h2>
         <label for="file-upload" class="custom-file-upload">
           Upload File
         </label>
@@ -137,7 +141,7 @@ const Files = (props) => {
             {" "}
             <br />{" "}
             <button className="submit" style={{ width: "600px" }}>
-              Refreshing List
+              Refreshing List...
             </button>
           </div>
         ) : null}
@@ -148,13 +152,13 @@ const Files = (props) => {
               <div style={{ justifyContent: "start" }}>
                 <button
                   onClick={() => {
-                    handleDownload(data.Key);
+                    handleDownload(data.Key,index);
                   }}
                   className="content"
                   style={{ background: "blue", margin: "10px" }}
                 >
                   {" "}
-                  Download File {index}{" "}
+               {downloadstart===index ? "Downloading..." :"Download File " + index }
                 </button>
               </div>
             );
