@@ -140,7 +140,7 @@ const Files = (props) => {
           <div>
             {" "}
             <br />{" "}
-            <button className="submit" style={{ width: "600px" }}>
+            <button className="submit" style={{ width: "200px" }}>
               Refreshing List...
             </button>
           </div>
